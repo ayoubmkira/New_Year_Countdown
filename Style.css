@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+body {
+	min-height: 100vh;
+	font-family: "Lobster Two", sans-serif;
+	background-image: url(image.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: rgba(255, 255, 255, .4);
+	background-blend-mode: overlay;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	text-align: center;
+}
+
+.title {
+	font-size: 5rem;
+}
+
+.time-container {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.time {
+	min-width: 20%;
+	font-size: 7rem;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, .5);
+	margin: 0 .5rem;
+	padding: 1rem .5rem 1.2rem .5rem;
+	border-radius: .5rem;
+	color: #FFF;
+	position: relative;
+	overflow: hidden;
+}
+.time::before {
+	position: absolute;
+	width: 100px;
+	height: 1.2rem;
+	background-color: #FFF;
+	font-size: .9rem;
+	color: #666;
+	transform: rotate(-35deg);
+	right: -25px;
+	bottom: 8px;
+}
+.days::before {
+	content: 'Days';
+}
+.hours::before {
+	content: 'Hours';
+}
+.minutes::before {
+	content: 'Minutes';
+}
+.seconds::before {
+	content: 'Seconds';
+}
+
+@media screen and (max-width: 650px) {
+
+	html {
+		font-size: 10px;
+	}
+	.time::before {
+		right: -35px;
+		bottom: 10px;
+	}
+
+}
+@media screen and (max-width: 400px) {
+
+	.time {
+		font-size: 2.5rem;
+	}
+	.time::before {
+		right: -38px;
+		bottom: 5px;
+	}
+
+}
